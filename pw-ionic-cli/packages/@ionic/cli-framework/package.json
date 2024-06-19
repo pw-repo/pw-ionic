@@ -1,6 +1,6 @@
 {
   "name": "pw-ionic-cli-framework",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "The foundation framework of the Ionic CLI",
   "author": "pw",
   "main": "./index.js",
@@ -12,7 +12,6 @@
     "clean": "rm -rf index.* definitions.* guards.* ./utils",
     "build": "npm run clean && tsc",
     "watch": "tsc -w",
-    "test": "jest",
     "prepublishOnly": "npm run build",
     "preinstall": "npx npm-force-resolutions || echo 1"
   },
@@ -24,21 +23,6 @@
     "url": "https://github.com/pw-repo/pw-ionic-cli/issues"
   },
   "license": "MIT",
-  "jest": {
-    "globals": {
-      "ts-jest": {
-        "tsConfigFile": "tsconfig.json"
-      }
-    },
-    "moduleFileExtensions": [
-      "ts",
-      "js"
-    ],
-    "transform": {
-      ".(ts)": "<rootDir>/../../../node_modules/ts-jest/preprocessor.js"
-    },
-    "testRegex": "/__tests__/.*\\.(ts|js)$"
-  },
   "dependencies": {
     "chalk": "2.3.0",
     "ncp": "2.0.0",
