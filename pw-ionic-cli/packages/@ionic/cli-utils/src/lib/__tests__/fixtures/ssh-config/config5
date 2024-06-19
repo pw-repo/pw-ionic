@@ -1,6 +1,0 @@
-Host bar
-    IdentityFile /id_rsa
-
-Host foo
-    HostName 10.0.0.1
-    User dan
