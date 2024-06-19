@@ -11,6 +11,10 @@ To get the latest `@ionic/app-scripts`, please run:
 npm install @ionic/app-scripts@latest --save-dev
 ```
 
+### Requirements
+ - Minimum required Node: 10.24.1
+ - Python: 3.1.0
+
 ### Config Defaults
 
 Out of the box, Ionic starters have been preconfigured with great defaults for building fast apps, including:
