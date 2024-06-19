@@ -1,0 +1,45 @@
+{
+  "name": "@ionic/cli-plugin-proxy",
+  "version": "1.5.9",
+  "description": "Ionic CLI plugin for proxying all CLI HTTP requests",
+  "homepage": "https://ionicframework.com",
+  "author": "Ionic Team <hi@ionic.io> (https://ionicframework.com)",
+  "main": "./dist/index.js",
+  "types": "./dist/main.d.ts",
+  "scripts": {
+    "clean": "rm -rf ./dist",
+    "build": "npm run clean && tsc",
+    "watch": "tsc -w",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "ionic",
+    "cordova",
+    "ionic framework",
+    "ionicframework",
+    "ionic cordova",
+    "mobile",
+    "backend",
+    "app",
+    "hybrid",
+    "cordova",
+    "native",
+    "phonegap"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ionic-team/ionic-cli.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ionic-team/ionic-cli/issues"
+  },
+  "files": [
+    "dist/"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@ionic/cli-utils": "1.19.3",
+    "superagent-proxy": "1.0.2",
+    "tslib": "1.7.1"
+  }
+}

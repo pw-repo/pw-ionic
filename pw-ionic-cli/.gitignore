@@ -1,0 +1,15 @@
+*.sw*
+*.cookies
+node_modules/
+.idea/
+.vscode/
+coverage/
+.coveralls.yml
+.changelog/
+npm-debug.log*
+lerna-debug.log
+
+docs
+dist
+
+**/.npmrc
