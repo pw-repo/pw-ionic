@@ -1,6 +1,6 @@
 {
   "name": "pw-ionic-app-scripts",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Scripts for Ionic Projects",
   "author": "pw",
   "license": "MIT",
@@ -17,15 +17,12 @@
   },
   "scripts": {
     "build": "npm run clean && tsc && npm run sass",
-    "build-and-test": "jest",
-    "changelog": "./node_modules/.bin/conventional-changelog -p angular -i CHANGELOG.md -s",
     "clean": "rimraf ./dist",
     "github-release": "node ./scripts/create-github-release.js",
     "lint": "tslint -c ./tslint.json --project ./tsconfig.json --type-check -t stylish",
     "nightly": "npm run build && node ./scripts/publish-nightly.js",
     "sass": "node-sass ./src/dev-client/sass/ion-dev.scss --output ./bin/ --output-style compressed",
     "sass-watch": "npm run sass && node-sass ./src/dev-client/sass/ion-dev.scss --watch --output ./bin/ --output-style compressed",
-    "test": "jest",
     "watch": "npm run clean && tsc --watch & npm run sass-watch",
     "preinstall": "npx npm-force-resolutions || echo 1"
   },
@@ -42,7 +39,7 @@
     "fs-extra": "4.0.2",
     "glob": "7.1.2",
     "json-loader": "0.5.7",
-    "node-sass": "4.14.1",
+    "node-sass": "6.0.1",
     "os-name": "2.0.1",
     "postcss": "6.0.21",
     "proxy-middleware": "0.15.0",
@@ -82,10 +79,8 @@
     "@types/rewire": "2.5.27",
     "@types/webpack": "3.8.11",
     "@types/ws": "3.2.0",
-    "conventional-changelog-cli": "1.3.22",
+    "@types/mime": "2.0.0",
     "github": "0.2.4",
-    "ionic-cz-conventional-changelog": "1.0.0",
-    "jest": "21.2.1",
     "mock-fs": "4.4.2",
     "npm-force-resolutions": "0.0.10",
     "rewire": "2.5.2",
@@ -100,32 +95,11 @@
     "@types/express-serve-static-core": "4.11.1",
     "@types/minimatch": "3.0.3",
     "@types/serve-static": "1.13.1",
-    "@types/http-errors": "1.6.1",
-    "@types/mime": "2.0.0"
+    "@types/http-errors": "1.6.1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pw-repo/pw-ionic-app-scripts.git"
+    "url": "https://github.com/pw-repo/pw-ionic-app-scripts.git"
   },
-  "bugs": {
-    "url": "https://github.com/pw-repo/pw-ionic-app-scripts/issues"
-  },
-  "config": {
-    "commitizen": {
-      "path": "node_modules/ionic-cz-conventional-changelog"
-    }
-  },
-  "typings": "dist/index.d.ts",
-  "jest": {
-    "testEnvironment": "node",
-    "moduleFileExtensions": [
-      "ts",
-      "js"
-    ],
-    "transform": {
-      "^.+\\.(ts)$": "<rootDir>/preprocessor.js"
-    },
-    "testRegex": "/src/.*\\.spec\\.(ts|js)$",
-    "coverageDirectory": "coverage"
-  }
+  "typings": "dist/index.d.ts"
 }
